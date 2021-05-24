@@ -15,6 +15,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import br.com.zupacademy.mateus.casadocodigo.controller.response.ListarLivroResponse;
+
 
 @Entity
 public class Livro {
@@ -56,6 +58,11 @@ public class Livro {
 	@NotNull
 	@Valid
 	private Autor autor;
+	
+	@Deprecated
+	public Livro() {
+		
+	}
 
 	public Livro(@NotBlank String titulo, @NotBlank @Size(max = 500) String resumo, @NotBlank String sumario,
 			@NotNull @Min(20) BigDecimal preco, @NotNull @Min(100) int numeroDePag, @NotBlank String isbn,
@@ -70,6 +77,11 @@ public class Livro {
 		this.dataDaPublicacao = dataDaPublicacao;
 		this.categoria = categoria;
 		this.autor = autor;
+	}
+
+	public ListarLivroResponse ToModelListarLivroResponse() {
+
+		return new ListarLivroResponse(this.id,this.titulo);
 	}
 
 }
