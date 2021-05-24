@@ -11,7 +11,7 @@ public class AutorDTO {
 	
 	@NotBlank 
 	private String nome;
-	@Email @NotBlank @UniqueValue(domainClass = Autor.class, fieldName = "email", message = "Email já cadastrada")
+	@Email @NotBlank @UniqueValue(domainClass = Autor.class, fieldName = "email", message = "Email já cadastrado")
 	private String email;
 	@NotBlank @Size(max=400)
 	private String descricao;

@@ -5,15 +5,12 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.zupacademy.mateus.casadocodigo.controller.dto.CategoriaDTO;
-import br.com.zupacademy.mateus.casadocodigo.controller.validator.ProibeNomeDuplicadoCategoriaValidator;
 import br.com.zupacademy.mateus.casadocodigo.model.Categoria;
 import br.com.zupacademy.mateus.casadocodigo.repository.CategoriaRepository;
 
